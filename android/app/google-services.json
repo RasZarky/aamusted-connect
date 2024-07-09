@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1114114343",
+    "project_id": "aamusted-connect",
+    "storage_bucket": "aamusted-connect.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1114114343:android:b36e5859603be8d698c102",
+        "android_client_info": {
+          "package_name": "com.example.aamuster_connect"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWV8wZvM8TygXFyOqLOqDUdUOxCBXPWoM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
