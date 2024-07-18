@@ -1,4 +1,5 @@
 import 'package:aamuster_connect/ui/page/Auth/signup.dart';
+import 'package:aamuster_connect/ui/page/Auth/verifyEmail.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../../helper/enum.dart';
@@ -53,7 +54,7 @@ class _WelcomePageState extends State<WelcomePage> {
             ),
             const Spacer(),
             const TitleText(
-              'See what\'s happening in the world right now.',
+              'See what\'s happening in AAMUSTED right now.',
               fontSize: 25,
             ),
             const SizedBox(

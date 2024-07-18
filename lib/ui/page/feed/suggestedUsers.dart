@@ -87,6 +87,12 @@ class _SuggestedUsersState extends State<SuggestedUsers> {
                         isLoading: isLoading,
                       ),
                     ),
+                    TextButton(
+                      onPressed: () {
+                        state.displaySuggestions = false;
+                      },
+                      child: Text('Skip'),
+                    ),
                   ],
                 ),
               ),

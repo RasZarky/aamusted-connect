@@ -128,7 +128,7 @@ class _SignupState extends State<Signup> {
       return;
     }
     if (_nameController.text.length > 27) {
-      Utility.customSnackBar(context, 'Name length cannot exceed 27 character');
+      Utility.customSnackBar(context, 'Name length cannot exceed 27 characters');
       return;
     }
     if (_emailController.text.isEmpty || _passwordController.text.isEmpty) {
@@ -137,6 +137,10 @@ class _SignupState extends State<Signup> {
     } else if (_passwordController.text != _confirmController.text) {
       Utility.customSnackBar(
           context, 'Password and confirm password did not match');
+      return;
+    }
+    if (_passwordController.text.length < 8) {
+      Utility.customSnackBar(context, 'Password should be more than 8 characters');
       return;
     }
 
@@ -152,7 +156,7 @@ class _SignupState extends State<Signup> {
       displayName: _nameController.text,
       dob: DateTime(1950, DateTime.now().month, DateTime.now().day + 3)
           .toString(),
-      location: 'Somewhere in universe',
+      location: 'Somewhere in AAMUSTED',
       profilePic: Constants.dummyProfilePicList[randomNumber],
       isVerified: false,
     );
