@@ -1,7 +1,7 @@
 part of '../theme.dart';
 
 class TwitterColor {
-  static Color bondiBlue = const Color.fromRGBO(0, 132, 180, 1.0);
+  static Color bondiBlue = const Color(0xFF5E0C0C);
   static Color cerulean = const Color.fromRGBO(0, 172, 237, 1.0);
   static Color spindle = const Color.fromRGBO(192, 222, 237, 1.0);
   static Color white = const Color.fromRGBO(255, 255, 255, 1.0);
@@ -9,7 +9,7 @@ class TwitterColor {
   static Color woodsmoke = const Color.fromRGBO(20, 23, 2, 1.0);
   static Color woodsmoke_50 = const Color.fromRGBO(20, 23, 2, 0.5);
   static Color mystic = const Color.fromRGBO(230, 236, 240, 1.0);
-  static Color dodgeBlue = const Color.fromRGBO(29, 162, 240, 1.0);
+  static Color dodgeBlue = const Color(0xFF5E0C0C);
   static Color dodgeBlue_50 = const Color.fromRGBO(29, 162, 240, 0.5);
   static Color paleSky = const Color.fromRGBO(101, 119, 133, 1.0);
   static Color ceriseRed = const Color.fromRGBO(224, 36, 94, 1.0);

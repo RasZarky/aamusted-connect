@@ -26,7 +26,7 @@ class _ComposeBottomIconWidgetState extends State<ComposeBottomIconWidget> {
 
   @override
   void initState() {
-    wordCountColor = Colors.blue;
+    wordCountColor = Colors.green;
     widget.textEditingController.addListener(updateUI);
     super.initState();
   }
@@ -41,7 +41,7 @@ class _ComposeBottomIconWidgetState extends State<ComposeBottomIconWidget> {
         } else if (widget.textEditingController.text.length >= 280) {
           wordCountColor = Theme.of(context).colorScheme.error;
         } else {
-          wordCountColor = Colors.blue;
+          wordCountColor = Colors.green;
         }
       }
     });

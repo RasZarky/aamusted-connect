@@ -177,7 +177,7 @@ class _ChatScreenPageState extends State<ChatScreenPage> {
               alignLabelWithHint: true,
               hintText: 'Start with a message...',
               suffixIcon: IconButton(
-                  icon: const Icon(Icons.send), onPressed: submitMessage),
+                  icon: const Icon(Icons.send, color: Color(0xFF5E0C0C),), onPressed: submitMessage),
             ),
           ),
         ],
@@ -251,11 +251,11 @@ class _ChatScreenPageState extends State<ChatScreenPage> {
               )
             ],
           ),
-          iconTheme: const IconThemeData(color: Colors.blue),
+          iconTheme: const IconThemeData(color: Color(0xFF5E0C0C)),
           backgroundColor: Colors.white,
           actions: <Widget>[
             IconButton(
-                icon: const Icon(Icons.info, color: AppColor.primary),
+                icon: const Icon(Icons.info, color: Color(0xFF5E0C0C)),
                 onPressed: () {
                   Navigator.pushNamed(context, '/ConversationInformation');
                 })

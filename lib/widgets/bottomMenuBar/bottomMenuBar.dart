@@ -92,7 +92,7 @@ class _BottomMenubarState extends State<BottomMenubar> {
                   : Icon(
                       iconData,
                       color: index == state.pageIndex
-                          ? Theme.of(context).primaryColor
+                          ? const Color(0xFF5E0C0C)
                           : Theme.of(context).textTheme.bodySmall!.color,
                     ),
               onPressed: () {

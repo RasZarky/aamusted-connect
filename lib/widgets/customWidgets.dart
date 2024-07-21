@@ -32,7 +32,7 @@ Widget customIcon(
     child: Icon(
       icon,
       size: size,
-      color: isEnable ? Theme.of(context).primaryColor : iconColor,
+      color: isEnable ? const Color(0xFF5E0C0C) : iconColor,
     ),
   );
 }

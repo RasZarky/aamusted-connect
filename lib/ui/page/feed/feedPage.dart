@@ -129,14 +129,14 @@ class _FeedPageBody extends StatelessWidget {
         leading: Builder(
           builder: (BuildContext context) {
             return IconButton(
-              icon: const Icon(Icons.menu),
+              icon: const Icon(Icons.menu, color: Color(0xFF5E0C0C),),
               onPressed: () {
                 scaffoldKey.currentState!.openDrawer();
               },
             );
           },
         ),
-        title: Image.asset('assets/images/icon-480.png', height: 40),
+        title: Image.asset('assets/images/icon-480.png', height: 80),
         centerTitle: true,
         iconTheme: IconThemeData(color: Theme.of(context).primaryColor),
         backgroundColor: Theme.of(context).appBarTheme.backgroundColor,

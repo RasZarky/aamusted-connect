@@ -70,7 +70,7 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
           border: InputBorder.none,
           focusedBorder: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(30.0)),
-              borderSide: BorderSide(color: Colors.blue)),
+              borderSide: BorderSide(color: Color(0xFF5E0C0C))),
           contentPadding:
               const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
         ),
@@ -83,6 +83,7 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
       margin: const EdgeInsets.symmetric(vertical: 15),
       width: MediaQuery.of(context).size.width,
       child: CustomFlatButton(
+        color: const Color(0xFF5E0C0C),
         label: "Submit",
         onPressed: _submit,
         borderRadius: 30,

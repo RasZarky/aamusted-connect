@@ -66,9 +66,11 @@ class _UpdateAppState extends State<UpdateApp> with WidgetsBindingObserver {
               width: double.infinity,
               margin: const EdgeInsets.symmetric(vertical: 35),
               child: CustomFlatButton(
+                color: Color(0xFF5E0C0C),
                 label: "Update now",
-                onPressed: () => Utility.launchURL(
-                    "https://play.google.com/store/apps/details?id=com.thealphamerc.flutter_twitter_clone"),
+                onPressed: (){},
+                    // () => Utility.launchURL(
+                    // "https://play.google.com/store/apps/details?id=com.thealphamerc.flutter_twitter_clone"),
                 borderRadius: 30,
               ),
             )

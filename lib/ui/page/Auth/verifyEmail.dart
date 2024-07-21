@@ -59,7 +59,7 @@ class _VerifyEmailPageState extends State<VerifyEmailPage> {
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30),
             ),
-            color: Colors.blueAccent,
+            color: const Color(0xFF5E0C0C),
             onPressed: _submit,
             padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
             child: const TitleText(

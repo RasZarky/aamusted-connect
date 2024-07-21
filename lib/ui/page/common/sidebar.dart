@@ -30,7 +30,7 @@ class _SidebarMenuState extends State<SidebarMenu> {
         child: Center(
           child: Text(
             'Login to continue',
-            style: TextStyles.onPrimaryTitleText,
+            style: TextStyles.onPrimaryTitleText.copyWith(color: const Color(0xFF5E0C0C)),
           ),
         ),
       ).ripple(() {

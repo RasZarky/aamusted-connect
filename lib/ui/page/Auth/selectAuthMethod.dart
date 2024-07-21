@@ -1,5 +1,4 @@
 import 'package:aamuster_connect/ui/page/Auth/signup.dart';
-import 'package:aamuster_connect/ui/page/Auth/verifyEmail.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../../helper/enum.dart';
@@ -24,6 +23,7 @@ class _WelcomePageState extends State<WelcomePage> {
       width: MediaQuery.of(context).size.width,
       child: CustomFlatButton(
         label: "Create Account",
+        color: const Color(0xFF5E0C0C),
         onPressed: () {
           var state = Provider.of<AuthState>(context, listen: false);
           Navigator.push(
@@ -49,12 +49,11 @@ class _WelcomePageState extends State<WelcomePage> {
           children: <Widget>[
             SizedBox(
               width: MediaQuery.of(context).size.width - 80,
-              height: 40,
+              height: 400,
               child: Image.asset('assets/images/icon-480.png'),
             ),
-            const Spacer(),
             const TitleText(
-              'See what\'s happening in AAMUSTED right now.',
+              'See what\'s happening in AMMUSTED right now.',
               fontSize: 25,
             ),
             const SizedBox(

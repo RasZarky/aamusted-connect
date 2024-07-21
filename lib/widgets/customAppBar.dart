@@ -72,7 +72,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                     const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
                 decoration: BoxDecoration(
                   color: !isSubmitDisable
-                      ? Theme.of(context).primaryColor
+                      ? const Color(0xFF5E0C0C)
                       : Theme.of(context).primaryColor.withAlpha(150),
                   borderRadius: BorderRadius.circular(20),
                 ),
@@ -97,7 +97,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                   icon: customIcon(context,
                       icon: icon!,
                       isTwitterIcon: true,
-                      iconColor: AppColor.primary,
+                      iconColor: const Color(0xFF5E0C0C),
                       size: 25),
                 )
     ];
@@ -122,10 +122,10 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       iconTheme: const IconThemeData(color: Colors.blue),
       backgroundColor: Colors.white,
       leading: isBackButton
-          ? const BackButton()
+          ? const BackButton(color: Color(0xFF5E0C0C),)
           : isCrossButton
               ? IconButton(
-                  icon: const Icon(Icons.close),
+                  icon: const Icon(Icons.close, color: Color(0xFF5E0C0C),),
                   onPressed: () {
                     Navigator.pop(context);
                   },

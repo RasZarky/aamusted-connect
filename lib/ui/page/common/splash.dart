@@ -127,15 +127,15 @@ class _SplashPageState extends State<SplashPage> {
             children: <Widget>[
               Platform.isIOS
                   ? const CupertinoActivityIndicator(
-                      radius: 35,
+                      radius: 55,
                     )
                   : const CircularProgressIndicator(
-                      strokeWidth: 2,
+                      strokeWidth: 4,
                     ),
               Image.asset(
                 'assets/images/icon-480.png',
-                height: 30,
-                width: 30,
+                height: 50,
+                width: 50,
               )
             ],
           ),

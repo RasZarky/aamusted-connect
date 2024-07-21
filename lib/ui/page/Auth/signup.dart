@@ -102,7 +102,7 @@ class _SignupState extends State<Signup> {
             borderRadius: BorderRadius.all(
               Radius.circular(30.0),
             ),
-            borderSide: BorderSide(color: Colors.blue),
+            borderSide: BorderSide(color: Color(0xFF5E0C0C)),
           ),
           contentPadding:
               const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
@@ -115,6 +115,7 @@ class _SignupState extends State<Signup> {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 35),
       child: CustomFlatButton(
+        color: const Color(0xFF5E0C0C),
         label: "Sign up",
         onPressed: () => _submitForm(context),
         borderRadius: 30,

@@ -92,7 +92,7 @@ class _SignInState extends State<SignIn> {
           border: InputBorder.none,
           focusedBorder: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(30.0)),
-              borderSide: BorderSide(color: Colors.blue)),
+              borderSide: BorderSide(color: Color(0xFF5E0C0C))),
           contentPadding:
               const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
         ),
@@ -109,8 +109,8 @@ class _SignInState extends State<SignIn> {
       },
       child: Text(
         title,
-        style: TextStyle(
-            color: TwitterColor.dodgeBlue, fontWeight: FontWeight.bold),
+        style: const TextStyle(
+            color: Color(0xFF5E0C0C), fontWeight: FontWeight.bold),
       ),
     );
   }
@@ -119,6 +119,7 @@ class _SignInState extends State<SignIn> {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 35),
       child: CustomFlatButton(
+        color: const Color(0xFF5E0C0C),
         label: "Submit",
         onPressed: _emailLogin,
         borderRadius: 30,

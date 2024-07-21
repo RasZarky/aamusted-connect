@@ -37,7 +37,7 @@ class AppTheme {
     floatingActionButtonTheme: FloatingActionButtonThemeData(
       backgroundColor: TwitterColor.dodgeBlue,
     ),
-    colorScheme: const ColorScheme(
+    colorScheme: ColorScheme(
       background: Colors.white,
       onPrimary: Colors.white,
       onBackground: Colors.black,
@@ -45,8 +45,8 @@ class AppTheme {
       onSecondary: Colors.white,
       onSurface: Colors.black,
       error: Colors.red,
-      primary: Colors.blue,
-      primaryContainer: Colors.blue,
+      primary: const Color(0xFF5E0C0C),
+      primaryContainer: const Color(0xFF5E0C0C).withOpacity(.5),
       secondary: AppColor.secondary,
       secondaryContainer: AppColor.darkGrey,
       surface: Colors.white,
