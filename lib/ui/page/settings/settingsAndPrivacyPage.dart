@@ -47,7 +47,7 @@ class SettingsAndPrivacyPage extends StatelessWidget {
               navigateTo: 'AccessibilityPage'),
           const SettingRowWidget("Proxy", navigateTo: "ProxyPage"),
           const SettingRowWidget(
-            "About Fwitter",
+            "About AMMUSTED connect",
             navigateTo: "AboutPage",
           ),
           const SettingRowWidget(
@@ -55,7 +55,7 @@ class SettingsAndPrivacyPage extends StatelessWidget {
             showDivider: false,
             vPadding: 10,
             subtitle:
-                'These settings affect all of your Fwitter accounts on this devce.',
+                'These settings affect all of your AMMUSTED connect accounts on this device.',
           )
         ],
       ),

@@ -40,7 +40,7 @@ class ContentPrefrencePage extends StatelessWidget {
             "Recommendations",
             vPadding: 15,
             subtitle:
-                "Select which language you want recommended Tweets, people, and trends to include",
+                "Select which language you want recommended posts, people, and trends to include",
           ),
           HeaderWidget(
             'Safety',

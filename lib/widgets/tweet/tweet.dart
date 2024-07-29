@@ -37,7 +37,7 @@ class Tweet extends StatelessWidget {
       Utility.copyToClipBoard(
           context: context,
           text: model.description ?? "",
-          message: "Tweet copy to clipboard");
+          message: "Post copied to clipboard");
     }
   }
 

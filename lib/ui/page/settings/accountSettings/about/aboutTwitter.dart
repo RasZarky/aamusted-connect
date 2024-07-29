@@ -16,7 +16,7 @@ class AboutPage extends StatelessWidget {
       appBar: CustomAppBar(
         isBackButton: true,
         title: customTitleText(
-          'About Fwitter',
+          'About AMMUSTED connect',
         ),
       ),
       body: ListView(
@@ -32,7 +32,7 @@ class AboutPage extends StatelessWidget {
             showDivider: false,
             onPressed: () {
               Utility.launchURL(
-                  "https://github.com/TheAlphamerc/flutter_twitter_clone/issues");
+                  "https://github.com/RasZarky/aamusted-connect/issues");
             },
           ),
           const HeaderWidget('Legal'),
@@ -54,7 +54,7 @@ class AboutPage extends StatelessWidget {
             onPressed: () async {
               showLicensePage(
                 context: context,
-                applicationName: 'Fwitter',
+                applicationName: 'AMMUSTED connect',
                 applicationVersion: '1.0.0',
                 useRootNavigator: true,
               );
@@ -62,16 +62,16 @@ class AboutPage extends StatelessWidget {
           ),
           const HeaderWidget('Developer'),
           SettingRowWidget("Github", showDivider: true, onPressed: () {
-            Utility.launchURL("https://github.com/TheAlphamerc");
+            Utility.launchURL("https://github.com/RasZarky");
           }),
           SettingRowWidget("LinkidIn", showDivider: true, onPressed: () {
-            Utility.launchURL("https://www.linkedin.com/in/thealphamerc/");
+            Utility.launchURL("");
           }),
           SettingRowWidget("Twitter", showDivider: true, onPressed: () {
-            Utility.launchURL("https://twitter.com/TheAlphaMerc");
+            Utility.launchURL("");
           }),
           SettingRowWidget("Blog", showDivider: true, onPressed: () {
-            Utility.launchURL("https://dev.to/thealphamerc");
+            Utility.launchURL("");
           }),
         ],
       ),

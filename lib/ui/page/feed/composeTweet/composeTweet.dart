@@ -559,7 +559,7 @@ class _TextField extends StatelessWidget {
                   ? 'What\'s happening?'
                   : isRetweet
                       ? 'Add a comment'
-                      : 'Tweet your reply',
+                      : 'Post your reply',
               hintStyle: const TextStyle(fontSize: 18)),
         ),
       ],

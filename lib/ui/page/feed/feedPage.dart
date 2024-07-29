@@ -85,7 +85,7 @@ class _FeedPageBody extends StatelessWidget {
                 ? SliverToBoxAdapter(
                     child: SizedBox(
                       height: context.height - 135,
-                      child: CustomScreenLoader(
+                      child: const CustomScreenLoader(
                         height: double.infinity,
                         width: double.infinity,
                         backgroundColor: Colors.white,

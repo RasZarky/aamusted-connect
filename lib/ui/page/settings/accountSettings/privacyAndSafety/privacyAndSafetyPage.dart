@@ -22,11 +22,11 @@ class PrivacyAndSaftyPage extends StatelessWidget {
       body: ListView(
         physics: const BouncingScrollPhysics(),
         children: const <Widget>[
-          HeaderWidget('Tweets'),
+          HeaderWidget('Posts'),
           SettingRowWidget(
-            "Protect your tweet",
+            "Protect your posts",
             subtitle:
-                'Only current followers and people you approve in future will be able to see your tweets.',
+                'Only current followers and people you approve in future will be able to see your posts.',
             vPadding: 15,
             showDivider: false,
             visibleSwitch: true,
@@ -106,7 +106,7 @@ class PrivacyAndSaftyPage extends StatelessWidget {
           SettingRowWidget(
             "Precise location",
             subtitle:
-                'Disabled \n\n\nIf enabled, Fwitter will collect, store, and use your device\'s precise location, such as your GPS information. This lets Fwitter improve your experience - for example, showing you mpre local content, ads, and recommendations.',
+                'Disabled \n\n\nIf enabled, AMMUSTED connect will collect, store, and use your device\'s precise location, such as your GPS information. This lets AMMUSTED connect improve your experience - for example, showing you mpre local content, ads, and recommendations.',
           ),
           HeaderWidget(
             'Personalisation and data',
@@ -117,7 +117,7 @@ class PrivacyAndSaftyPage extends StatelessWidget {
             subtitle: "Allow all",
           ),
           SettingRowWidget(
-            "See your Fwitter data",
+            "See your AMMUSTED account data",
             subtitle:
                 "Review and edit your profile information and data associated with your account.",
           ),

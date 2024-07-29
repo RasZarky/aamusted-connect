@@ -39,7 +39,7 @@ class NotificationPage extends StatelessWidget {
             "Unread notification count badge",
             showCheckBox: false,
             subtitle:
-                'Display a badge with the number of notifications waiting for you inside the Fwitter app.',
+                'Display a badge with the number of notifications waiting for you inside the AMMUSTED connect app.',
           ),
           SettingRowWidget("Push notifications"),
           SettingRowWidget("SMS notifications"),

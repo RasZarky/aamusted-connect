@@ -107,7 +107,7 @@ class TrendsPage extends StatelessWidget {
           const SettingRowWidget(
             "Trends location",
             navigateTo: null,
-            subtitle: 'New York',
+            subtitle: 'AAMUSTED campus',
             showDivider: false,
           ),
           const SettingRowWidget(

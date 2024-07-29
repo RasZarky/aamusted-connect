@@ -318,8 +318,8 @@ class _ProfilePageState extends State<ProfilePage>
       socialMetaTagParameters: SocialMetaTagParameters(
         description: !user.bio!.contains("Edit profile")
             ? user.bio
-            : "Checkout ${user.displayName}'s profile on Fwitter app",
-        title: "${user.displayName} is on Fwitter app",
+            : "Checkout ${user.displayName}'s profile on AMMUSTED connect app",
+        title: "${user.displayName} is on AMMUSTED connect app",
         imageUrl: Uri.parse(user.profilePic!),
       ),
     );
@@ -368,8 +368,8 @@ class _ProfilePageState extends State<ProfilePage>
                         indicator: TabIndicator(),
                         controller: _tabController,
                         tabs: const <Widget>[
-                          Text("Tweets"),
-                          Text("Tweets & replies"),
+                          Text("Posts"),
+                          Text("Posts & replies"),
                           Text("Media")
                         ],
                       ),
@@ -440,11 +440,11 @@ class _ProfilePageState extends State<ProfilePage>
                 padding: const EdgeInsets.only(top: 50, left: 30, right: 30),
                 child: NotifyText(
                   title: isMyProfile
-                      ? 'You haven\'t ${isReply ? 'reply to any Tweet' : isMedia ? 'post any media Tweet yet' : 'post any Tweet yet'}'
-                      : '${authState.profileUserModel.userName} hasn\'t ${isReply ? 'reply to any Tweet' : isMedia ? 'post any media Tweet yet' : 'post any Tweet yet'}',
+                      ? 'You haven\'t ${isReply ? 'reply to any post' : isMedia ? 'post any media yet' : 'post anything yet'}'
+                      : '${authState.profileUserModel.userName} hasn\'t ${isReply ? 'reply to any post' : isMedia ? 'post any media yet' : 'post anything yet'}',
                   subTitle: isMyProfile
-                      ? 'Tap tweet button to add new'
-                      : 'Once he\'ll do, they will be shown up here',
+                      ? 'Tap post button to add new'
+                      : 'Once he does, they will be shown up here',
                 ),
               )
 

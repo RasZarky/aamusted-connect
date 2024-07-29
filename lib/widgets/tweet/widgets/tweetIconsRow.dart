@@ -138,7 +138,7 @@ class TweetIconsRow extends StatelessWidget {
             customText(Utility.getPostTime2(model.createdAt),
                 style: TextStyles.textStyle14),
             const SizedBox(width: 10),
-            customText('Fwitter for Android',
+            customText('AMMUSTED connect',
                 style: TextStyle(color: Theme.of(context).primaryColor))
           ],
         ),
@@ -178,7 +178,7 @@ class TweetIconsRow extends StatelessWidget {
                         : const SizedBox(width: 5),
                     AnimatedCrossFade(
                       firstChild: const SizedBox.shrink(),
-                      secondChild: customText('Retweets',
+                      secondChild: customText('Reposts',
                           style: TextStyles.subtitleStyle),
                       crossFadeState: !isRetweetAvailable
                           ? CrossFadeState.showFirst
@@ -249,9 +249,9 @@ class TweetIconsRow extends StatelessWidget {
         builder: (BuildContext context) => UsersListPage(
           pageTitle: "Liked by",
           userIdsList: model.likeList!.map((userId) => userId).toList(),
-          emptyScreenText: "This tweet has no like yet",
+          emptyScreenText: "This post has no like yet",
           emptyScreenSubTileText:
-              "Once a user likes this tweet, user list will be shown here",
+              "Once a user likes this post, user list will be shown here",
         ),
       ),
     );

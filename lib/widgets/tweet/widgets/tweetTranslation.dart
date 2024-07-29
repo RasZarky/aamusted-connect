@@ -2,7 +2,6 @@ import 'package:aamuster_connect/ui/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:translator/translator.dart';
-
 import '../../../helper/utility.dart';
 import '../../../state/feedState.dart';
 import '../../url_text/customUrlText.dart';
@@ -82,7 +81,7 @@ Widget _translation(Translation translation, BuildContext context,
               children: [
                 Text(
                   "Translated from ${translation.sourceLanguage} ",
-                  style: TextStyle(
+                  style: const TextStyle(
                       fontSize: 11,
                       color: AppColor.lightGrey,
                       fontWeight: FontWeight.bold),

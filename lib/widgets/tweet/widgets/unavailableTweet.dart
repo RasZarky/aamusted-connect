@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../../helper/enum.dart';
 import '../../../model/feedModel.dart';
 import '../../../ui/theme/theme.dart';
@@ -39,7 +38,7 @@ class UnavailableTweet extends StatelessWidget {
                 ),
               ),
             )
-          : Text('This Tweet is unavailable', style: TextStyles.userNameStyle),
+          : Text('This post is unavailable', style: TextStyles.userNameStyle),
     );
   }
 }
