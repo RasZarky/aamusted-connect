@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:aamuster_connect/ui/page/announcement/announcementPage.dart';
 import 'package:aamuster_connect/ui/page/profile/profilePage.dart';
 import 'package:firebase_dynamic_links/firebase_dynamic_links.dart';
 import 'package:flutter/foundation.dart';
@@ -199,6 +200,8 @@ class _HomePageState extends State<HomePage> {
         return NotificationPage(scaffoldKey: _scaffoldKey);
       case 3:
         return ChatListPage(scaffoldKey: _scaffoldKey);
+      case 4:
+        return AnnouncementPage(scaffoldKey: _scaffoldKey);
       default:
         return FeedPage(scaffoldKey: _scaffoldKey);
     }
