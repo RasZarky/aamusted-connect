@@ -10,6 +10,7 @@ import '../../../state/feedState.dart';
 import '../../../widgets/customWidgets.dart';
 import '../../../widgets/newWidget/customLoader.dart';
 import '../../../widgets/newWidget/emptyList.dart';
+import '../../../widgets/newWidget/title_text.dart';
 import '../../theme/theme.dart';
 
 class AnnouncementPage extends StatefulWidget {
@@ -294,24 +295,51 @@ class TweetWidget extends StatelessWidget {
                   CircleAvatar(
                     backgroundImage: NetworkImage(feedModel.user.profilePic),
                   ),
-                  const SizedBox(width: 8.0),
+                  const SizedBox(width: 20),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        feedModel.user.displayName,
-                        style: const TextStyle(fontWeight: FontWeight.bold),
+                      Row(
+                        children: [
+                          TitleText(currentUser!.displayName!,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w800,
+                              overflow: TextOverflow.ellipsis),
+
+                          const SizedBox(width: 3),
+
+                          currentUser.emailVerified
+                              ? customIcon(
+                            context,
+                            icon: AppIcon.blueTick,
+                            isTwitterIcon: true,
+                            iconColor: AppColor.primary,
+                            size: 13,
+                            paddingIcon: 3,
+                          )
+                              : const SizedBox(width: 0),
+                          SizedBox(
+                            width: currentUser.emailVerified ? 5 : 0,
+                          ),
+                        ],
                       ),
-                      Text(
+                      customText(
                         Utility.getChatTime(feedModel.createdAt).toString(),
-                        style: const TextStyle(color: Colors.grey),
+                        style:
+                        TextStyles.userNameStyle.copyWith(fontSize: 12),
                       ),
                     ],
                   ),
                 ],
               ),
               const SizedBox(height: 8.0),
-              Text(feedModel.description),
+              Text(
+                  feedModel.description,
+                style: const TextStyle(
+                    color: Colors.black,
+                    fontSize: 12,
+                    fontWeight: FontWeight.w300),
+              ),
               if (feedModel.imageUrl != null) ...[
                 const SizedBox(height: 8.0),
                 Image.network(feedModel.imageUrl!),
