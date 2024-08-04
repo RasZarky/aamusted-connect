@@ -7,7 +7,6 @@ import '../../../state/authState.dart';
 import '../../../widgets/customFlatButton.dart';
 import '../../../widgets/customWidgets.dart';
 import '../../../widgets/newWidget/customLoader.dart';
-import '../../theme/theme.dart';
 
 class SignIn extends StatefulWidget {
   final VoidCallback? loginCallback;
@@ -54,16 +53,16 @@ class _SignInState extends State<SignIn> {
             _labelButton('Forget password?', onPressed: () {
               Navigator.of(context).pushNamed('/ForgetPasswordPage');
             }),
-            const Divider(
-              height: 30,
-            ),
-            const SizedBox(
-              height: 30,
-            ),
-            GoogleLoginButton(
-              loginCallback: widget.loginCallback!,
-              loader: loader,
-            ),
+            // const Divider(
+            //   height: 30,
+            // ),
+            // const SizedBox(
+            //   height: 30,
+            // ),
+            // GoogleLoginButton(
+            //   loginCallback: widget.loginCallback!,
+            //   loader: loader,
+            // ),
             const SizedBox(height: 100),
           ],
         ),

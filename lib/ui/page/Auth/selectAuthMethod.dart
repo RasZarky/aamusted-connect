@@ -53,7 +53,7 @@ class _WelcomePageState extends State<WelcomePage> {
               child: Image.asset('assets/images/icon-480.png'),
             ),
             const TitleText(
-              'See what\'s happening in AMMUSTED right now.',
+              'See what\'s happening in AAMUSTED right now.',
               fontSize: 25,
             ),
             const SizedBox(

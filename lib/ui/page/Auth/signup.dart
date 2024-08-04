@@ -64,12 +64,12 @@ class _SignupState extends State<Signup> {
             _entryField('Confirm password',
                 controller: _confirmController, isPassword: true),
             _submitButton(context),
-            const Divider(height: 30),
-            const SizedBox(height: 30),
-            GoogleLoginButton(
-              loginCallback: widget.loginCallback,
-              loader: loader,
-            ),
+            // const Divider(height: 30),
+            // const SizedBox(height: 30),
+            // GoogleLoginButton(
+            //   loginCallback: widget.loginCallback,
+            //   loader: loader,
+            // ),
             const SizedBox(height: 30),
           ],
         ),
@@ -142,6 +142,10 @@ class _SignupState extends State<Signup> {
     }
     if (_passwordController.text.length < 8) {
       Utility.customSnackBar(context, 'Password should be more than 8 characters');
+      return;
+    }
+    if (!_emailController.text.endsWith('.aamusted.com')){
+      Utility.customSnackBar(context, 'Enter a valid AAMUSTED email');
       return;
     }
 

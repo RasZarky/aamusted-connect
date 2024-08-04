@@ -34,7 +34,7 @@ class _AnnouncementPageState extends State<AnnouncementPage> {
     String? email = currentUser?.email;
     showFloatingButton = currentUser != null &&
         currentUser?.email != null &&
-        email!.endsWith('@stf.ammusted.com');
+        email!.endsWith('@stf.aamusted.com');
     super.initState();
   }
 
