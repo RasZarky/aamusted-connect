@@ -301,14 +301,14 @@ class TweetWidget extends StatelessWidget {
                     children: [
                       Row(
                         children: [
-                          TitleText(currentUser!.displayName!,
+                          TitleText(feedModel.user.displayName,
                               fontSize: 16,
                               fontWeight: FontWeight.w800,
                               overflow: TextOverflow.ellipsis),
 
                           const SizedBox(width: 3),
 
-                          currentUser.emailVerified
+                          currentUser!.emailVerified
                               ? customIcon(
                             context,
                             icon: AppIcon.blueTick,

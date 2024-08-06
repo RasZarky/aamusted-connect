@@ -610,25 +610,11 @@ class UserNameRowWidget extends StatelessWidget {
                 height: 30,
               ),
               _textButton(context, user.getFollower, ' Followers', () {
-                var state = context.read<ProfileState>();
-                Navigator.push(
-                  context,
-                  FollowerListPage.getRoute(
-                    profile: state.profileUserModel,
-                    userList: state.profileUserModel.followersList!,
-                  ),
-                );
+
               }),
               const SizedBox(width: 40),
               _textButton(context, user.getFollowing, ' Following', () {
-                var state = context.read<ProfileState>();
-                Navigator.push(
-                  context,
-                  FollowingListPage.getRoute(
-                    profile: state.profileUserModel,
-                    userList: state.profileUserModel.followingList!,
-                  ),
-                );
+
               }),
             ],
           ),
