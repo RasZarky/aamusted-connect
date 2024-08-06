@@ -55,8 +55,8 @@ class _SplashPageState extends State<SplashPage> {
     final buildNo = packageInfo.buildNumber;
     final config = await _getAppVersionFromFirebaseConfig();
 
-    if (config != null &&
-        config['name'] == currentAppVersion &&
+    if (config == null ||
+        config['name'] != currentAppVersion ||
         config['versions'].contains(int.tryParse(buildNo))) {
       return true;
     } else {
