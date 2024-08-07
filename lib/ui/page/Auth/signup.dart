@@ -144,7 +144,7 @@ class _SignupState extends State<Signup> {
       Utility.customSnackBar(context, 'Password should be more than 8 characters');
       return;
     }
-    if (!_emailController.text.endsWith('.aamusted.com')){
+    if (!_emailController.text.endsWith('.aamusted.edu.gh')){
       Utility.customSnackBar(context, 'Enter a valid AAMUSTED email');
       return;
     }
