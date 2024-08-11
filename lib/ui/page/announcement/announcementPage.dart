@@ -40,14 +40,15 @@ class _AnnouncementPageState extends State<AnnouncementPage> {
 
   Widget _floatingActionButton(BuildContext context) {
     return FloatingActionButton(
+      backgroundColor: Colors.yellow,
       onPressed: () {
         _showAddAnnouncementDialog(context);
       },
       child: customIcon(
         context,
-        icon: AppIcon.fabTweet,
-        isTwitterIcon: true,
-        iconColor: Theme.of(context).colorScheme.onPrimary,
+        icon: Icons.notifications,
+        isTwitterIcon: false,
+        iconColor: Colors.red,
         size: 25,
       ),
     );

@@ -172,6 +172,7 @@ class _ComposeTweetReplyPageState extends State<ComposeTweetPage> {
         displayName: myUser.displayName ?? myUser.email!.split('@')[0],
         profilePic: profilePic,
         userId: myUser.userId,
+        email: myUser.email,
         isVerified: authState.userModel!.isVerified,
         userName: authState.userModel!.userName);
     var tags = Utility.getHashTags(_textEditingController.text);

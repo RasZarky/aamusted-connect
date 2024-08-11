@@ -41,7 +41,7 @@ class UserModel extends Equatable {
       this.isVerified,
       this.fcmToken,
       this.followersList,
-      this.followingList});
+      this.followingList, });
 
   UserModel.fromJson(Map<dynamic, dynamic>? map) {
     if (map == null) {
