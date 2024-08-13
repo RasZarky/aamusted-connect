@@ -228,7 +228,7 @@ class _AnnouncementPageState extends State<AnnouncementPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: !showFloatingButton ? _floatingActionButton(context) : null,
+      floatingActionButton: showFloatingButton ? _floatingActionButton(context) : null,
       backgroundColor: TwitterColor.mystic,
       body: SafeArea(
         child: SizedBox(

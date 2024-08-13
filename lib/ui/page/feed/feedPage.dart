@@ -106,7 +106,7 @@ class _FeedPageBody extends StatelessWidget {
                             (model) {
                               String email = model.user?.email ?? "";
                               return Container(
-                                color: email.contains('st.aamusted.edu.gh') || email == "" ? Colors.white : Colors.green.withOpacity(.3),
+                                color: !email.contains('stf.aamusted.edu.gh') || email == "" ? Colors.white : Colors.green.withOpacity(.3),
                                 child: Tweet(
                                   model: model,
                                   trailing: TweetBottomSheet().tweetOptionIcon(
