@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:onesignal_flutter/onesignal_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_storage/firebase_storage.dart';
@@ -12,6 +13,8 @@ import '../../../widgets/newWidget/customLoader.dart';
 import '../../../widgets/newWidget/emptyList.dart';
 import '../../../widgets/newWidget/title_text.dart';
 import '../../theme/theme.dart';
+import 'dart:convert';
+import 'package:http/http.dart' as http;
 
 class AnnouncementPage extends StatefulWidget {
   const AnnouncementPage(
@@ -37,6 +40,7 @@ class _AnnouncementPageState extends State<AnnouncementPage> {
         email!.endsWith('@stf.aamusted.edu.gh');
     super.initState();
   }
+
 
   Widget _floatingActionButton(BuildContext context) {
     return FloatingActionButton(
@@ -150,6 +154,38 @@ class _AnnouncementPageState extends State<AnnouncementPage> {
     );
   }
 
+  Future<void> sendNotification(String bodyText) async {
+    String appId = "93f3d861-87de-4902-8d85-af08075fa12c";
+    String restApiKey = "MjhkODE1N2QtMDQ2Ni00ZTQ3LThiNDktMjVjYzc5ZDdkZWFi";
+
+    var headers = {
+      'Content-Type': 'application/json; charset=UTF-8',
+      'Authorization': 'Basic $restApiKey',
+    };
+
+    var body = jsonEncode({
+      "app_id": appId,
+      "headings": {"en": "New Announcement"},
+      "contents": {"en": bodyText},
+      "included_segments": ["All"],
+    });
+
+    var response = await http.post(
+      Uri.parse('https://onesignal.com/api/v1/notifications'),
+      headers: headers,
+      body: body,
+    );
+
+    if (response.statusCode == 200) {
+      print("Notification sent successfully!");
+    } else {
+      print("Failed to send notification: ${response.statusCode}");
+      print(response.body);
+    }
+  }
+
+
+  // the _addAnnouncement method to include sending notifications
   Future<void> _addAnnouncement(String description, String? imageUrl) async {
     DatabaseReference ref = FirebaseDatabase.instance.ref().child('announcement').push();
 
@@ -166,12 +202,33 @@ class _AnnouncementPageState extends State<AnnouncementPage> {
     };
 
     await ref.set(announcement);
+
+
+    sendNotification(description);
+
   }
+  // Future<void> _addAnnouncement(String description, String? imageUrl) async {
+  //   DatabaseReference ref = FirebaseDatabase.instance.ref().child('announcement').push();
+  //
+  //   Map<String, dynamic> announcement = {
+  //     'description': description,
+  //     'createdAt': DateTime.now().toIso8601String(),
+  //     'imagePath': imageUrl,
+  //     'user': {
+  //       'displayName': currentUser?.displayName ?? 'Anonymous',
+  //       'isVerified': false,
+  //       'profilePic': currentUser?.photoURL ?? '',
+  //       'userId': currentUser?.uid ?? '',
+  //     },
+  //   };
+  //
+  //   await ref.set(announcement);
+  // }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: showFloatingButton ? _floatingActionButton(context) : null,
+      floatingActionButton: !showFloatingButton ? _floatingActionButton(context) : null,
       backgroundColor: TwitterColor.mystic,
       body: SafeArea(
         child: SizedBox(

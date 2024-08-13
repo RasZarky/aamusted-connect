@@ -63,6 +63,9 @@ dependencies:
   freezed_annotation: ^2.0.3
   flutter_launcher_icons: ^0.13.1
 
+  flutter_local_notifications: ^17.2.2
+  onesignal_flutter: ^5.1.2
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

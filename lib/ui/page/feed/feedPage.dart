@@ -104,9 +104,9 @@ class _FeedPageBody extends StatelessWidget {
                         delegate: SliverChildListDelegate(
                           list!.map(
                             (model) {
-                              String? email = model.user?.email;
+                              String email = model.user?.email ?? "";
                               return Container(
-                                color: email!.contains('st.aamusted.edu.gh') ? Colors.white : Colors.green.withOpacity(.3),
+                                color: email.contains('st.aamusted.edu.gh') || email == "" ? Colors.white : Colors.green.withOpacity(.3),
                                 child: Tweet(
                                   model: model,
                                   trailing: TweetBottomSheet().tweetOptionIcon(
